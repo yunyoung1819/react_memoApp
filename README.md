@@ -1,3 +1,3 @@
 # react_memoApp
-React Memo Text App
+React Memo Note App
 
