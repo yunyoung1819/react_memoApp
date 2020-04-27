@@ -17,7 +17,7 @@ class App extends React.Component {
     // state 선언하기
     state = {
         notes: [],
-        activeId: '190803',
+        activeId: null,
     }
 
     // 이벤트 핸들러 메소드
@@ -27,6 +27,8 @@ class App extends React.Component {
 
     render() {
         const { notes, activeId } = this.state;
+        // 현재 활성화된 객체를 찾아서 activeNote 변수에 할당
+        const activeNote = notes.filter((item) => item.id === activeId)[0];
         return (
             <div className="app">
                 <Header/>
@@ -37,7 +39,11 @@ class App extends React.Component {
                         activeId={activeId}
                         onListItemClick={this.handleListItemClick}  // 메소드 전달
                     />
-                    <Note/>
+                    { /* activeNote가 존재할 때 <Note />를 렌더링 */ }
+                    { /* note 속성에 activeNote 전달 */ }
+                    {
+                        notes.length !== 0 && <Note note={activeNote} />
+                    }
                 </div>
             </div>
         );
