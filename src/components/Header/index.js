@@ -6,7 +6,7 @@ class Header extends React.Component {
         return (
             <div className="header">
                 <div className="title">
-                    <span>Young's 심플노트</span>
+                    <span>심플노트 엡</span>
                 </div>
                 <div className="buttons">
                     <button>추가</button>
