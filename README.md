@@ -1,3 +1,3 @@
 # react memo App
-React Memo Note App
+React Memo Note Application
 
